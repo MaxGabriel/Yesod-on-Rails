@@ -1,0 +1,5 @@
+$(function(){
+	$("section.#{sectionClass}").hide();
+	$("#myButton").click(function(){document.location = "@{SomeRouteR}";});
+	^{addBling}
+});
