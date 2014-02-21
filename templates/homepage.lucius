@@ -16,4 +16,17 @@ h1 {
 	line-height: 1;
 }
 
+/* Content */
+
+.yesod-logo {
+	max-width: 90px;
+}
+
 /* Site */
+
+.site-footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #eaeaea;
+	color: #999999;
+}

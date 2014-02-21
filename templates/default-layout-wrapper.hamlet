@@ -37,8 +37,13 @@ $newline never
                                 <a href=@{HomeR}>Sign In
         <div class="container content">
             ^{pageBody pc}
-            <footer>
-                #{extraCopyright $ appExtra $ settings master}
+            <footer class="footer site-footer">
+                <small>Yesod Tutorial by Max Tagher
+                <nav>
+                    <ul>
+                        <li>About
+                        <li>Contact
+                        <li>News
 
         $maybe analytics <- extraAnalytics $ appExtra $ settings master
             <script>

@@ -2,6 +2,9 @@
 module Handler.Home where
 
 import Import
+import Settings.StaticFiles
+
+--staticFiles "static"
 
 -- This is a handler function for the GET request method on the HomeR
 -- resource pattern. All of your resource patterns are defined in
