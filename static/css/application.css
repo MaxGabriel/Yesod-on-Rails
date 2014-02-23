@@ -1,0 +1,33 @@
+h1 {
+	text-align: center;
+}
+
+/* header */
+
+#nav-bar {
+	/* Unsure what's going on, but position: fixed; causes the nav bar to overlap all the content. */
+	position: static;
+}
+
+#logo {
+	float: left;
+	margin-right: 10px;
+	font-size: 1.7em;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	padding-top: 9px;
+	font-weight: 500;
+	line-height: 1;
+
+	text-decoration: none;
+}
+
+/* Footer */
+
+.site-footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #eaeaea;
+	color: #999999;
+}

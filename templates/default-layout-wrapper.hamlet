@@ -13,7 +13,7 @@ $newline never
         <meta name="author" content="">
 
         <meta name="viewport" content="width=device-width,initial-scale=1">
-
+        <link rel="stylesheet" type="text/css" href=@{StaticR css_application_css}>
         ^{pageHead pc}
 
         \<!--[if lt IE 9]>
@@ -23,7 +23,7 @@ $newline never
         <script>
           document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
     <body>
-        <header class="navbar navbar-fixed-top navbar-inverse">
+        <header class="navbar navbar-fixed-top navbar-inverse" id="nav-bar">
             <div class="navbar-inner">
                 <div class="container">
                     <a href=@{HomeR} id="logo">Sample App

@@ -1,4 +1,4 @@
-<div class="center hero-unit">
+<div class="center hero-unit my-hero">
     <h1>Welcome to the Sample App
 
     <h2> 
@@ -6,5 +6,5 @@
         <a href="http://yesodweb.com/">Yesod
         sample application.
 
-    <a href=@{HomeR} class="btn btn-large btn-primary"> Sign up now!
+    <a href=@{UserR} class="btn btn-large btn-primary"> Sign up now!
 <img src=@{StaticR img_yesodlogo_png} class="yesod-logo">
