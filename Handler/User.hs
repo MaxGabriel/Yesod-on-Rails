@@ -25,7 +25,7 @@ passwordConfirmField = Field
     , fieldView = \idAttr nameAttr otherAttrs eResult isReq ->
         [whamlet|
             <input id=#{idAttr} name=#{nameAttr} *{otherAttrs} type=password>
-            <label class="control-label" for=#{idAttr}-confirm>Password</label>
+            <label class="control-label" for=#{idAttr}-confirm>Confirmation</label>
             <input id=#{idAttr}-confirm name=#{nameAttr} *{otherAttrs} type=password>
         |]
     , fieldEnctype = UrlEncoded
