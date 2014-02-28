@@ -4,6 +4,13 @@ module Handler.User where
 
 import Import
 import qualified Data.Text as T
+-- import App.Passwords
+import OpenSSL.Random
+import Data.Maybe
+import Data.Text.Encoding
+import OpenSSL.Random
+import Data.Digest.BCrypt
+import Data.ByteString
 
 data UserForm = UserForm
     { username :: Text
@@ -45,9 +52,20 @@ getUserR = do
     defaultLayout $ do
         $(widgetFile "signup")
 
+hashPassword :: Text -> ByteString -> Text
+hashPassword plaintext seed =
+    let bytePlainText = encodeUtf8 plaintext
+        salt = fromJust $ genSalt 10 seed -- Not sure why genSalt would fail, so just letting it error if so.
+        byteHash = bcrypt bytePlainText salt
+    in decodeUtf8 byteHash
+
 postUserR :: Handler Html
 postUserR = do
     ((res, widget), enctype) <- runFormPost $ renderBootstrap (userForm Nothing)
+    seed <- liftIO $ randBytes 16
     case res of 
-        FormSuccess user -> defaultLayout [whamlet|Success|]
+        FormSuccess user -> let x = hashPassword (password user) seed
+                            in defaultLayout [whamlet|#{x}|]
         _                -> defaultLayout $(widgetFile "signup")
+
+
