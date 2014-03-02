@@ -4,7 +4,6 @@ module Handler.User where
 
 import Import
 import qualified Data.Text as T
--- import App.Passwords
 import OpenSSL.Random
 import Data.Maybe
 import Data.Text.Encoding

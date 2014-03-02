@@ -1,0 +1,24 @@
+Default: &defaults
+  user: root
+  password: pazyeh
+  host: localhost
+  port: 3306
+  database: Cool
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: Cool_test
+  <<: *defaults
+
+Staging:
+  database: Cool_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: Cool_production
+  poolsize: 100
+  <<: *defaults
